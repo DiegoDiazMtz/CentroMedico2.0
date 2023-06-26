@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Doctores</title>
+<link rel="stylesheet" href="/public/Style.css">
+    <link rel="stylesheet" href="/public/Estilos_Externos.css">
+</head>
+<body>
+  <form action="/submenu" method="post" class="my-form">
+  <div class="options-container">
+      <label onclick="submitForm('AdministracionMedicos')">Administración Médica</label>
+      <label onclick="submitForm('RegPas')">Registro Paciente</label>
+      <label onclick="submitForm('Diagnostico')">Diagnóstico</label>
+      <label onclick="submitForm('ConsultarPaciente')">Consultar Paciente</label>
+      <label onclick="submitForm('AdministracionConsultas')">Administración Consultas</label>
+  </div>
+  <input type="hidden" id="menuField" name="menu">
+  <input type="submit" id="submitButton" style="display: none;">
+</form>
+
+<script>
+  function submitForm(menuValue) {
+      document.getElementById("menuField").value = menuValue;
+      document.getElementById("submitButton").click();
+  }
+</script>
+
+
+      
+
+<div class="Formulario">
+    <h1> Buscar Dr.</h1>
+    <form method="post">
+        <div class="username">
+            <input type="text" required>
+            <label>Apellido o Nombre del Dr.</label>
+        </div>
+
+    </form>
+    <input type="submit" value="Buscar"> 
+        <form method="post">
+        <div class="username">
+            <input type="text" required>
+            <label>Lista de Dr.</label>
+
+        
+    </form>
+  </div>  
+ 
+</body>
+</html>
