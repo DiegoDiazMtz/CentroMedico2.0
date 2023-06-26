@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro Pacientes</title>
+<link rel="stylesheet" href="/public/Style.css">
+    <link rel="stylesheet" href="/public/Estilos_Externos.css">
+</head>
+<body>
+    <form action="/submenu" method="post" class="my-form">
+        <div class="options-container">
+            <label onclick="submitForm('AdministracionMedicos')">Administración Médica</label>
+            <label onclick="submitForm('RegPas')">Registro Paciente</label>
+            <label onclick="submitForm('Diagnostico')">Diagnóstico</label>
+            <label onclick="submitForm('ConsultarPaciente')">Consultar Paciente</label>
+            <label onclick="submitForm('AdministracionConsultas')">Administración Consultas</label>
+        </div>
+        <input type="hidden" id="menuField" name="menu">
+        <input type="submit" id="submitButton" style="display: none;">
+      </form>
+      
+      <script>
+        function submitForm(menuValue) {
+            document.getElementById("menuField").value = menuValue;
+            document.getElementById("submitButton").click();
+        }
+      </script>
+
+<div class="Formulario">
+    <h1>Registro de Paciente</h1>
+    <form method="post">
+        <div class="username">
+            <input type="text" required>
+            <label>Nombre Dr</label>
+        </div>
+        <div class="username">
+
+            <input type="text" required>
+            <label>Nombre(s) Paciente</label>
+        </div>
+        <div class="username">
+            <input type="text" required>
+            <label>Apellido Paterno</label>
+        </div>
+        <div class="username">
+            <input type="text" required>
+            <label>Fecha de Nacimiento</label>
+        </div>
+        <div class="username">
+            <input type="number" required>
+            <label>Edad</label>
+        </div>
+        <div class="username">
+            <input type="text" required>
+            <label>Enfermedades Cronicas</label>
+        </div>
+        <div class="username">
+            <input type="Text" required>
+            <label>Alergias</label>
+        </div>
+        <div class="username">
+            <input type="text" required>
+            <label>Antecedentes familares</label>
+            
+    </form>
+  </div>  
+  <input type="submit" value="Aceptar">
+  <input type="submit" value="Agregar"> 
+  <input type="submit" value="Actualizar">
+  <input type="submit" value="Borrar"> 
+  <input type="submit" value="Salir">  
+</body>
+</html>
