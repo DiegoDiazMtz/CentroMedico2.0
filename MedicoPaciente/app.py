@@ -19,7 +19,7 @@ def index():
     return render_template('Index.html')
 
 @app.route('/ingresarpaciente', methods=['POST'])
-def guardar():
+def ingresarpaciente():
     if request.method=='POST':
         VnombreP= request.form['nombreP']
         VapellidoPP= request.form['apellidoPP']
@@ -34,16 +34,36 @@ def guardar():
         mysql.connection.commit()
 
 
-    flash('Album Agregado Correctamente')    
+    flash('Paciente Agregado Correctamente')    
     return redirect(url_for('RegPas'))
 
-@app.route('/IAdmIMedica')
-def IAdmIMedica():
-    return render_template('IAdmIMedica.html')
+@app.route('/ingresarmedico', methods=['POST'])
+def ingresarmedico():
+    if request.method=='POST':
+        Vrfc= request.form['RFC']
+        Vnombre= request.form['nombre']
+        VapellidoP= request.form['apellidoP']
+        VapellidoM= request.form['apellidoM']
+        Vrol= request.form['rol']
+        VcedulaP= request.form['cedulaP']
+        Vcorreo= request.form['correo']
+
+        CS= mysql.connection.cursor()
+        CS.execute('insert into Datos_meds (RFC, nombre, apellidoP, apellidoM, rol, Cedula_prof, Correo) values (%s,%s,%s,%s,%s,%s,%s)', (Vrfc, Vnombre, VapellidoP, VapellidoM, Vrol, VcedulaP, Vcorreo))        
+        mysql.connection.commit()
+
+
+    flash('Medico Agregado Correctamente')    
+    return redirect(url_for('IAdmIMedica'))
 
 @app.route('/RegPas')
 def RegPas():
     return render_template('RegPas.html')
+
+
+@app.route('/IAdmIMedica')
+def IAdmIMedica():
+    return render_template('IAdmIMedica.html')
 
 
 @app.route('/ingresar', methods=['POST'])
