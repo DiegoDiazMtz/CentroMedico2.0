@@ -18,32 +18,32 @@
     {%endwith%}
     <div>
         <ul class="menuP">
-            <li><a href="IAdmIMedica.html">Administración Médica</a>
-                <ul class="submenu">  
-                </ul>
-            </li>
-            <li><a href="RegPas.html">Registro Paciente</a>
+            <li><a href="{{ url_for('IAdmIMedica') }}">Administración Médica</a>
                 <ul class="submenu">
                 </ul>
             </li>
-            <li><a href="IExploYDiagnost.html">Diagnostico</a>
+            <li><a href="{{ url_for('RegPas') }}">Registro Paciente</a>
                 <ul class="submenu">
                 </ul>
             </li>
-            <li><a href="ConsultaPacientes.html">Consultar Paciente</a>
-                <ul class="submenu">              
+            <li><a href="{{ url_for('IExploYDiagnost') }}">Diagnostico</a>
+                <ul class="submenu">
                 </ul>
             </li>
-            <li><a href="AdministracionMedicos.html">Administracion Consultas</a>
-                <ul class="submenu">               
+            <li><a href="{{ url_for('ConsultaPacientes') }}">Consultar Paciente</a>
+                <ul class="submenu">
                 </ul>
             </li>
-            <li><a href="ListaDr.html">Lista de Doctores</a>
-                <ul class="submenu">               
+            <li><a href="{{ url_for('AdministracionMedicos') }}">Administracion Consultas</a>
+                <ul class="submenu">
+                </ul>
+            <li><a href="{{ url_for('ListaDr') }}">Lista de Doctores</a>
+                <ul class="submenu">
                 </ul>
             </li>
             </li>
-        </ul> 
+            </li>
+        </ul>
     </div>
 
 <div class="Formulario">

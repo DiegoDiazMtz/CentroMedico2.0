@@ -19,26 +19,26 @@
     {%endwith%}
     <div>
         <ul class="menuP">
-            <li><a href="/templates/IAdmIMedica.html">Administración Médica</a>
+            <li><a href="{{ url_for('IAdmIMedica') }}">Administración Médica</a>
                 <ul class="submenu">
                 </ul>
             </li>
-            <li><a href="/templates/RegPas.html">Registro Paciente</a>
+            <li><a href="{{ url_for('RegPas') }}">Registro Paciente</a>
                 <ul class="submenu">
                 </ul>
             </li>
-            <li><a href="/templates/IExploYDiagnost.html">Diagnostico</a>
+            <li><a href="{{ url_for('IExploYDiagnost') }}">Diagnostico</a>
                 <ul class="submenu">
                 </ul>
             </li>
-            <li><a href="/templates/ConsultaPacientes.html">Consultar Paciente</a>
+            <li><a href="{{ url_for('ConsultaPacientes') }}">Consultar Paciente</a>
                 <ul class="submenu">
                 </ul>
             </li>
-            <li><a href="/templates/AdministracionMedicos.html">Administracion Consultas</a>
+            <li><a href="{{ url_for('AdministracionMedicos') }}">Administracion Consultas</a>
                 <ul class="submenu">
                 </ul>
-            <li><a href="/templates/ListaDr.html">Lista de Doctores</a>
+            <li><a href="{{ url_for('ListaDr') }}">Lista de Doctores</a>
                 <ul class="submenu">
                 </ul>
             </li>

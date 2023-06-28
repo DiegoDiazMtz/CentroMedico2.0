@@ -65,6 +65,25 @@ def RegPas():
 def IAdmIMedica():
     return render_template('IAdmIMedica.html')
 
+@app.route('/IExploYDiagnost')
+def IExploYDiagnost():
+    return render_template('IExploYDiagnost.html')
+
+
+@app.route('/ConsultaPacientes')
+def ConsultaPacientes():
+    return render_template('ConsultaPacientes.html')
+
+
+@app.route('/AdministracionMedicos')
+def AdministracionMedicos():
+    return render_template('AdministracionMedicos.html') 
+
+
+@app.route('/ListaDr')
+def ListaDr():
+    return render_template('ListaDr.html')
+
 
 @app.route('/ingresar', methods=['POST'])
 def ingresar():
